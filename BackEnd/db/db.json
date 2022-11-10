@@ -1,0 +1,80 @@
+{
+  "users": [
+    {
+      "email": "orange@test.com",
+      "password": "1235",
+      "name": "orange",
+      "id": 1
+    },
+    {
+      "email": "anthony@test.com",
+      "password": "1235",
+      "name": "Anthony",
+      "id": 2
+    }
+  ],
+  "WorkingTimes": [
+    {
+      "start": "8",
+      "end": "16",
+      "user": "orange",
+      "id": 1
+    },
+    {
+      "start": "9",
+      "end": "18",
+      "user": "orange",
+      "id": 2
+    },
+    {
+      "start": "7",
+      "end": "15",
+      "user": "orange",
+      "id": 3
+    },
+    {
+      "start": "5",
+      "end": "12",
+      "user": "orange",
+      "id": 4
+    },
+    {
+      "start": "1",
+      "end": "8",
+      "user": "orange",
+      "id": 5
+    }
+  ],
+  "Clock": [
+    {
+      "time": "02/11/2022",
+      "status": "false",
+      "user": "orange",
+      "id": 1
+    },
+    {
+      "time": "20/10/2022",
+      "status": "false",
+      "user": "orange",
+      "id": 2
+    },
+    {
+      "time": "20/10/2022",
+      "status": "false",
+      "user": "orange",
+      "id": 3
+    },
+    {
+      "time": "20/10/2022",
+      "status": "false",
+      "user": "orange",
+      "id": 4
+    },
+    {
+      "time": "20/10/2022",
+      "status": "false",
+      "user": "orange",
+      "id": 5
+    }
+  ]
+}
