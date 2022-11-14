@@ -16,7 +16,7 @@
                 <td>{{ item.id }}</td>
             </tr>
         </table>
-        <button class="ui button big toggle" :class="{ active: isActive }" @click="toggle">{{ isActive ? 'ON' : 'OFF'}}</button>
+        <button class="ui button big toggle" :class="{ active: isActive }" @click="toggle">{{ isActive ? 'Clock ON' : 'Clock OFF'}}</button>
         <canvas id="myChart" width="400" height="400"></canvas>
     </div>
 </template>
