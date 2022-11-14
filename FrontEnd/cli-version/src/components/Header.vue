@@ -2,11 +2,9 @@
     <div class="nav">
         <router-link to="/">Home</router-link>
         <router-link to="/working-time">Working times</router-link>
-        <router-link to="/clock">Clocks</router-link>
         <router-link to="/user">User</router-link>
         <a v-on:click="logout" href="#">Logout</a>
         <ProfileAvatar username="User"></ProfileAvatar>
-        <div>{{name}}</div>
     </div> 
 </template>
 

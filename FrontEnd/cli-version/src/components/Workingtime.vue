@@ -16,6 +16,7 @@
                 <td>{{ item.id }}</td>
             </tr>
         </table>
+        <button class="ui button big toggle" :class="{ active: isActive }" @click="toggle">{{ isActive ? 'ON' : 'OFF'}}</button>
         <canvas id="myChart" width="400" height="400"></canvas>
     </div>
 </template>
@@ -37,6 +38,10 @@ export default {
         Header
     },
 
+    toggle() {
+        this.isActive = !this.enable;
+    },
+
     async mounted() {
         let user = localStorage.getItem('user-info');
         this.name = JSON.parse(user).name;
@@ -51,7 +56,7 @@ export default {
 
         const ctx = document.getElementById('myChart').getContext('2d');
 
-        const labels = ['Clock1','Clock2','Clock3','Clock4','Clock5','Clock6','Clock7'];
+        const labels = ['Clock1', 'Clock2', 'Clock3', 'Clock4', 'Clock5', 'Clock6', 'Clock7'];
         const data = {
             labels: labels,
             datasets: [{
