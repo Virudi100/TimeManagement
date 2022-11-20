@@ -16,7 +16,14 @@
                 <td>{{ item.id }}</td>
             </tr>
         </table>
-        <button class="ui button big toggle" :class="{ active: isActive }" @click="toggle">{{ isActive ? 'Clock ON' : 'Clock OFF'}}</button>
+
+        <ul>
+            <li v-for="todo in todos" :key="todo.id">
+                <input type="checkbox" v-model="todo.done">
+                <span :class="{ done: todo.done }">{{ todo.text }}</span>
+            </li>
+        </ul>
+
         <canvas id="myChart" width="400" height="400"></canvas>
     </div>
 </template>
@@ -26,20 +33,20 @@ import Header from './Header.vue'
 import axios from 'axios';
 import Chart from 'chart.js/auto';
 import { isTSMethodSignature } from '@babel/types';
+
+let id = 0
 export default {
     name: 'Workingtime',
     data() {
         return {
+            newTodo: '',
             name: '',
-            worktimes: []
+            worktimes: [],
+            todos: [{ id: id++, text: 'Clock Trigger', done: false }],
         }
     },
     components: {
         Header
-    },
-
-    toggle() {
-        this.isActive = !this.enable;
     },
 
     async mounted() {
@@ -61,8 +68,8 @@ export default {
             labels: labels,
             datasets: [{
                 label: 'Start Time',
-                data: [, 59, 80, 81, 56, 55, 40],
-                fill: false,
+                data: [62, 59, 80, 81, 56, 55, 40],
+                fill: true,
                 borderColor: 'rgb(75, 192, 192)',
                 tension: 0.1
             }]
@@ -77,5 +84,11 @@ export default {
         myChart;
 
     }
+    
 }
 </script>
+
+<style>
+.done {
+  text-decoration: line-through;}
+</style>

@@ -1,6 +1,7 @@
 
 <template>
 <router-view />
+<toggle-button />
 </template>
 
 <script>
